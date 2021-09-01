@@ -1,0 +1,31 @@
+<%- include('header.ejs') %>
+
+<h3>All Departments Details</h3>
+<hr/>
+ 
+<a href="/depts/create" class="btn btn-success">Create New</a>
+<br/><br/>
+
+<table border="2" width="400" class="table" cellspacing="0"  cellpadding="5">
+    <tr>
+            <th>Deptno</th>
+            <th>Dname</th>
+            <th>Location</th>
+            <th></th>
+    </tr>   
+    
+    <%  for(let i in  deptsArray)
+        {  %>
+          <tr>
+            <td> <%=deptsArray[i].deptno %> </td>
+            <td> <%=deptsArray[i].dname %> </td>
+            <td> <%=deptsArray[i].loc %> </td>
+            <td>
+                <a class="btn btn-primary" href="/depts/details/<%=deptsArray[i].deptno %>">Details</a> |
+                <a class="btn btn-danger" href="/depts/delete/<%=deptsArray[i].deptno %>">Delete</a>  |
+                <a class="btn btn-warning" href="/depts/edit/<%=deptsArray[i].deptno %>">Edit</a>
+            </td>
+          </tr>
+      <% } %>
+    
+</table>

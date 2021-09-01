@@ -1,0 +1,19 @@
+<%- include('header.ejs') %>
+
+<div  style="padding:10px;">
+<h3>Crate New Dept</h3>
+<hr/>
+<form action="/depts/create" method="POST">
+        <br />			
+        Deptno:  	<input 	type="text"  name="txtDeptno"  />			
+        <br />	<br />			
+        Dname:  	<input 	type="text"  name="txtDname"  />			
+        <br />	<br />			
+        Location:  	<input 	type="text"  name="txtLoc"  />			
+        <br />	<br />			
+        <input 	type="submit" value=" Create " />				
+    </fieldset>
+</form>
+<hr/>
+<a href="/depts/ShowDepts">Back to Depts</a>
+</div>

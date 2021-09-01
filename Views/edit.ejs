@@ -1,0 +1,19 @@
+<%- include('header.ejs') %>
+
+<div  style="padding:10px;">
+<h3>Edit  Dept</h3>
+<hr/>
+<form action="/depts/edit" method="POST">
+        <br />			
+        Deptno:  	<input 	type="text"  readonly  value="<%=deptObj.deptno%>"  name="txtDeptno"  />			
+        <br />	<br />			
+        Dname:  	<input 	type="text" value="<%=deptObj.dname%>" name="txtDname"  />			
+        <br />	<br />			
+        Location:  	<input 	type="text" value="<%=deptObj.loc%>" name="txtLoc"  />			
+        <br />	<br />			
+        <input 	type="submit" value=" Edit " />				
+    </fieldset>
+</form>
+<hr/>
+<a href="/depts/ShowDepts">Back to Depts</a>
+</div>
